@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printnumbers.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 17:48:19 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/19 17:05:55 by jtruckse         ###   ########.fr       */
+/*   Created: 2025/11/19 18:19:25 by jtruckse          #+#    #+#             */
+/*   Updated: 2025/11/19 18:23:55 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-# include <unistd.h>
-# include <stdarg.h>
+#include "ft_printf.h"
 
-int	ft_printf(const char *format, ...);
+int	ft_putnbr(va_list ap, char type)
+{
 
-#endif
+}
+
+int ft_putunbr(va_list ap, char type)
+{
+
+}

@@ -6,11 +6,13 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:47:33 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/12 20:53:16 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/19 18:22:41 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+
 
 static int	ft_putstrnchar(va_list ap, char type)
 {
@@ -45,12 +47,11 @@ static int	ft_check_type(char type, va_list ap)
 	count = 0;
 	if (type == 'c' || type == 's')
 		count += ft_putstrnchar(ap, type);
-	// else if ()
-	// {
-	// }
-	// else if (input == p)
-	// {
-	// }
+	else if (type == 'd' || type == 'i' )
+		count += ft_putnbr(ap, type);
+	else if (type == 'u')
+	{
+	}
 	// else if (input == d || input == i)
 	// 	else if (input == u);
 	// else if (input == x || input == X)
@@ -84,15 +85,15 @@ int	ft_printf(const char *format, ...)
 	return (count);
 }
 
-int	main(void)
-{
-	int result;
-	char *s = NULL;
-	char c = 'T';
-	result = 0;
-	result = printf("%c\n%s\n%%\n", c, s);
-	printf("%d\n", result);
-	result = ft_printf("%c\n%s\n", c, s);
-	printf("%d\n", result);
-	return (0);
-}
+// int	main(void)
+// {
+// 	int result;
+// 	char *s = NULL;
+// 	char c = 'T';
+// 	result = 0;
+// 	result = printf("%c\n%s\n%%\n", c, s);
+// 	printf("%d\n", result);
+// 	result = ft_printf("%c\n%s\n", c, s);
+// 	printf("%d\n", result);
+// 	return (0);
+// }
