@@ -6,7 +6,7 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 17:48:19 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/19 17:05:55 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/21 16:37:15 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 # include <stdarg.h>
 
 int	ft_printf(const char *format, ...);
+int	ft_putnumbers(int n, char type);
 
 #endif
