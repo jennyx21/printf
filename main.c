@@ -2,8 +2,14 @@
 
 int main(void)
 {
-	int i = ft_putnumbers(-12345, 'i');
-	printf("\n%i\n", i);
+	write(1, "i: ", 3);
+	int i = ft_puthexnumbers(2, 'x');
+	write(1, "\n", 1);
+	printf("p: %x\n", 2);
+	// int i = 10;
+	// unsigned int n = 5;
+	// while (i--)
+	// 	printf("%u\n", n--);
 }
 // {
 // 	int		i;
@@ -16,7 +22,7 @@ int main(void)
 // 		write(1, &digit, 1);
 // 		n = n / 10;
 // 		i++;
-// 	}
+// 	}s
 // 	if (n == 0)
 // 	{
 // 		write(1, "0", 1);

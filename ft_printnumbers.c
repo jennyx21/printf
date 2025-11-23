@@ -12,7 +12,9 @@
 
 #include "ft_printf.h"
 
-int	ft_putnumbers(int n, char type)
+// unsigned unsigned unsigned unsigned unsigned unsigned unsigned number
+
+int	ft_putnumbers(unsigned int n, char type)
 {
 	int		i;
 	char	digit;
@@ -22,7 +24,7 @@ int	ft_putnumbers(int n, char type)
 	if (n > 9)
 	{	
 		i += ft_putnumbers(n / 10, type);
-		printf("printf:###%d###\n", n);
+		 //printf("printf:###%d###\n", n);
 	}
 	digit = n % 10 + '0';
 	write(1, &digit, 1);
