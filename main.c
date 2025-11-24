@@ -3,9 +3,9 @@
 int main(void)
 {
 	write(1, "i: ", 3);
-	int i = ft_puthexnumbers(2, 'x');
+	int i = ft_puthexnumbers(0, 'X');
 	write(1, "\n", 1);
-	printf("p: %x\n", 2);
+	printf("p: %X\n", 0);
 	// int i = 10;
 	// unsigned int n = 5;
 	// while (i--)

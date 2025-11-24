@@ -6,7 +6,7 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 18:19:25 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/23 19:35:01 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/24 13:41:19 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_putnumbers(unsigned int n, char type)
 	if (n > 9)
 	{	
 		i += ft_putnumbers(n / 10, type);
-		 //printf("printf:###%d###\n", n);
+
 	}
 	digit = n % 10 + '0';
 	write(1, &digit, 1);

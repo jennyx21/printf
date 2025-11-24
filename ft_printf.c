@@ -6,7 +6,7 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:47:33 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/23 19:15:17 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/24 17:18:48 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,8 @@ static int	ft_check_type(char type, va_list ap)
 		count += ft_putnbr(va_arg(ap, int), type);
 	else if (type == 'u')
 		count += ft_putnumbers(va_arg(ap, int), type);
-	// else if (input == d || input == i)
-	// 	else if (input == u);
-	// else if (input == x || input == X)
+	else if (input == 'x' || input == 'X')
+		count += ft_puthexnumbers(va_arg(ap, int), type)
 	// {
 	// }
 	else
