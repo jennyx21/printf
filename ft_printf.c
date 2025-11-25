@@ -6,13 +6,11 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:47:33 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/24 17:18:48 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/25 17:18:45 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-
 
 static int	ft_putstrnchar(va_list ap, char type)
 {
@@ -50,13 +48,13 @@ static int	ft_check_type(char type, va_list ap)
 	else if (type == 'd' || type == 'i')
 		count += ft_putnbr(va_arg(ap, int), type);
 	else if (type == 'u')
-		count += ft_putnumbers(va_arg(ap, int), type);
-	else if (input == 'x' || input == 'X')
-		count += ft_puthexnumbers(va_arg(ap, int), type)
-	// {
-	// }
-	else
-		return (0);
+		count += ft_putnumbers(va_arg(ap, unsigned int), type);
+	else if (type == 'x' || type == 'X')
+		count += ft_puthexnumbers(va_arg(ap, unsigned int), type);
+	else if (type == 'p')
+		count += ft_puthexnumbers(va_arg(ap, unsigned long), type);
+	else if (type == '%')
+		count += write (1, "%", 1);
 	return (count);
 }
 
@@ -82,16 +80,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (count);
 }
-
-// int	main(void)
-// {
-// 	int result;
-// 	char *s = NULL;
-// 	char c = 'T';
-// 	result = 0;
-// 	result = printf("%c\n%s\n%%\n", c, s);
-// 	printf("%d\n", result);
-// 	result = ft_printf("%c\n%s\n", c, s);
-// 	printf("%d\n", result);
-// 	return (0);
-// }

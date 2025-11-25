@@ -6,7 +6,12 @@ CFLAGS   := -Wall -Wextra -Werror
 OBJDIR   := obj
 
 
-SRC =	ft_printf.c
+SRC =	ft_printf.c \
+		ft_printf.c \
+		ft_printnumbers.c \
+		ft_printhex.c \
+		ft_printpointer.c
+
 OBJ = $(patsubst %.c,$(OBJDIR)/%.o,$(SRC))
 
 all: $(NAME)
