@@ -6,7 +6,7 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/25 15:36:06 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/25 17:11:56 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:23:49 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,15 @@ static int	ft_putpointerhex(unsigned long ap, char type)
 
 int	ft_putpointer(unsigned long ap, char type)
 {
+	int i;
+
+	i = 0;
 	if (ap == 0)
-		write(1, "(nil)", 5);
+		i += write(1, "(nil)", 5);
 	else
 	{
-		write(1, "0x", 2);
+		i += write(1, "0x", 2);
 		ft_putpointerhex(ap, type);
 	}
-	return (2);
+	return (i);
 }

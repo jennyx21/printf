@@ -6,7 +6,7 @@
 /*   By: jtruckse <jtruckse@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:47:33 by jtruckse          #+#    #+#             */
-/*   Updated: 2025/11/25 17:18:45 by jtruckse         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:09:27 by jtruckse         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static int	ft_check_type(char type, va_list ap)
 	else if (type == 'x' || type == 'X')
 		count += ft_puthexnumbers(va_arg(ap, unsigned int), type);
 	else if (type == 'p')
-		count += ft_puthexnumbers(va_arg(ap, unsigned long), type);
+		count += ft_putpointer(va_arg(ap, unsigned long), type);
 	else if (type == '%')
 		count += write (1, "%", 1);
 	return (count);
